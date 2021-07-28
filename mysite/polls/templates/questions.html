@@ -1,0 +1,6 @@
+<{% extends "base.html" %}
+{% block content %}
+    {% for q in questions %}
+        <p>{{ q.id }}:{{q.question_text}}</p>
+    {% endfor %}
+{% endblock content %}

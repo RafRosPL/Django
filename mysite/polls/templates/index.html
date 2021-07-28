@@ -1,0 +1,7 @@
+<{% extends "base.html" %}
+{% block content %}
+    <p><a href="{% url 'questions' %}"> Redirect to Questions</a></p>
+    <p><a href="{% url 'answers'%}"> Redirect to Answers</a></p>
+    <p><a href="{% url 'polls' %}"> Redirect to Polls</a></p>
+
+{% endblock content %}

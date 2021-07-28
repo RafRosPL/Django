@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Welcome to Polls Questions!</h1>
+	{% for q in object_list %}
+		<a href="{% url 'generic_urls:question-detail-view' pk=q.pk %}">
+			<li> Question {{q.id}}</li>
+		</a>
+	{% endfor %}
+	<a href="{% url 'polls:index' %}"> Back to INDEX </a>
+	{% endblock %}
