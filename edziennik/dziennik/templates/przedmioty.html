@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
   <body>
     <h1>Witamy w edzienniku, wybierz przedmiot</h1>
-    {% for coś in dziennik %}
-      <li>{{ coś }}</li>
+    {% for coś in przedmioty %}
+      <li>{{ coś.name }}</li>
     {% endfor %}
-  </body>
-</html>
+    {% endblock %}
