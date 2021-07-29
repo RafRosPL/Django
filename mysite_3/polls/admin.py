@@ -15,7 +15,7 @@ class Question(admin.ModelAdmin):
     list_display_links = ('id', 'question_text')
     list_per_page = 20
     list_filrer = ('pub_date',)
-    search_fields = ("gquestion_text",)
+    search_fields = ("question_text",)
     actions = ('cleanup_text',)
 
     @staticmethod
