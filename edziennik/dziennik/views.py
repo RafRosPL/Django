@@ -1,10 +1,23 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from dziennik.models import Przedmioty
+from dziennik.models import Ocena, Przedmiot, Klasa, Student, Nauczyciel
 
-def dziennik(request):
+def przedmioty(request):
     return render(
         request,
         template_name="przedmioty.html",
-        context={"przedmioty": Przedmioty.objects.all()}
+        context={"przedmioty": Przedmiot.objects.all()}
+    )
+
+def klasy(request):
+    return render(
+        request,
+        template_name="klasa.html",
+        context={"klasy": Klasa.objects.all()}
+    )
+def studenty(request):
+    return render(
+        request,
+        template_name="student.html",
+        context={"students": Student.objects.all()}
     )
