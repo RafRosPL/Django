@@ -15,9 +15,17 @@ def klasy(request):
         template_name="klasa.html",
         context={"klasy": Klasa.objects.all()}
     )
-def studenty(request):
+
+# def studenty(request):
+#     return render(
+#         request,
+#         template_name="student.html",
+#         context={"students": Student.objects.all()}
+#     )
+
+def nauczyciele(request):
     return render(
         request,
-        template_name="student.html",
-        context={"students": Student.objects.all()}
+        template_name="nauczyciele.html",
+        context={"nauczyciele": Nauczyciel.objects.all()}
     )

@@ -30,16 +30,36 @@ class Student(models.Model):
 
 class Ocena(models.Model):
     ndst = "1"
+    ndstplus = "1+"
+    dopminus = "2-"
     dop = "2"
+    dopplus = "2+"
+    dstminus = "3-"
     dst = "3"
+    dstplus = "3+"
+    dbminus = "4-"
     db = "4"
+    dbplus = "4+"
+    bdbminus = "5-"
     bdb = "5"
+    bdbplus = "5+"
+    celminus = "6-"
     cel = "6"
     mozliwe_oceny =[(ndst, "1"),
+                    (ndstplus, "1+"),
+                    (dopminus, "2-"),
                     (dop, "2"),
+                    (dopplus, "2+"),
+                    (dstminus, "3-"),
                     (dst, "3"),
+                    (dstplus, "3+"),
+                    (dbminus, "4-"),
                     (db, "4"),
+                    (dbplus, "4+"),
+                    (bdbminus, "5-"),
                     (bdb, "5"),
+                    (bdbplus, "5+"),
+                    (celminus, "6-"),
                     (cel, "6")]
     name = models.CharField(max_length=4,choices=mozliwe_oceny)
     pub_date = models.DateTimeField(auto_now_add=True)
