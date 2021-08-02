@@ -16,12 +16,12 @@ def klasy(request):
         context={"klasy": Klasa.objects.all()}
     )
 
-# def studenty(request):
-#     return render(
-#         request,
-#         template_name="student.html",
-#         context={"students": Student.objects.all()}
-#     )
+def studenty(request):
+    return render(
+        request,
+        template_name="student.html",
+        context={"students": Student.objects.all()}
+    )
 
 def nauczyciele(request):
     return render(
