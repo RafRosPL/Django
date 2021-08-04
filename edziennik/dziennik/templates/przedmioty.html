@@ -5,4 +5,5 @@
       {% for coś in przedmioty %}
     <li>{{ coś.name }}</li>
     {% endfor %}
+     <a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
     {% endblock %}

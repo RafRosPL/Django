@@ -15,12 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from dziennik.views import klasy, przedmioty, studenty, nauczyciele
+from dziennik.views import klasy, przedmioty, studenty, nauczyciele, index
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("przedmioty/", przedmioty),
-    path("klasy/", klasy),
-    path("uczniowie/", include("dziennik.generic_urls")),
-    path("nauczyciele/", nauczyciele),
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path("przedmioty/", przedmioty),
+#     path("klasy/", klasy),
+#     path("uczniowie/", include("dziennik.generic_urls")),
+#     path("nauczyciele/", nauczyciele),
+#     path('',index, name="index"),
+# ]
+
+urlpatterns =[
+    path("admin/", admin.site.urls),
+    path("edziennik/", include("dziennik.urls")),
+    path("edziennik/", include("dziennik.generic_urls"))
 ]

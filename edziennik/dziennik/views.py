@@ -29,3 +29,9 @@ def nauczyciele(request):
         template_name="nauczyciele.html",
         context={"nauczyciele": Nauczyciel.objects.all()}
     )
+
+def index(request):
+    return render(
+        request,
+        template_name="index.html"
+    )
