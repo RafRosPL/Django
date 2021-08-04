@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-  <body>
+<body>
     <h1>Witamy w edzienniku, wybierz ucznia:</h1>
-    <li>{{ object.name }}</li>
+        {% for coś in students %}-
+            <li>{{ coś.name }}</li>
+        {% endfor %}
+	<a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
     {% endblock %}
