@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> E-dziennik </h1>
+	<a href="{% url 'edziennik:przedmioty' %}"> Przedmioty </a><br>
+	<a href="{% url 'edziennik:klasy' %}"> Klasy </a><br>
+    <a href="{% url 'edziennik:nauczyciele' %}"> Nauczyciele </a><br>
+	{% endblock %}
