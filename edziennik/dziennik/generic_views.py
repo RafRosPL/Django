@@ -14,22 +14,22 @@ from django.views.generic import (
 	DeleteView)
 
 class UczniowieDetailView(DetailView, LoginRequiredMixin):
-    # def get(self, request, pk):
-    #     obj = get_object_or_404(Student, pk=pk)
-    #     return render(
-    #         request,
-    #         template_name="student.html",
-    #         context={"student":obj}
-    #     )
     model = Student
     template_name = "student.html"
+    def get_context_data(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        print(kwargs)
+        context["students"] = Student.objects.filter(klasa__id=kwargs['object'].id)
+        return context
 
 class UczniowieListView(ListView, LoginRequiredMixin):
     template_nama ="student.html"
     model =Student
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
-        context["students"] = Klasa.objects.all()
+        print(kwargs)
+        print(kwargs['objects.id'])
+        context["students"] = Student.objects.filter(klasa__id=kwargs['object'].id)
         return context
 
 
