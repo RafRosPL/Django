@@ -2,8 +2,8 @@
 {% block content %}
   <body>
     <h1>Witamy w edzienniku, wybierz przedmiot:</h1>
-      {% for coś in przedmioty %}
-    <li>{{ coś.name }} {{klasa}}</li>
-    {% endfor %}
-     <a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
+        {% for coś in przedmioty %}
+            <li>{{ coś.name }} {{klasa}}</li>
+        {% endfor %}
+    <a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
     {% endblock %}
