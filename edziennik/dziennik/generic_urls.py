@@ -5,6 +5,7 @@ app_name= "generic_urls"
 
 urlpatterns = [
     path('uczniowie/<int:pk>', generic_views.UczniowieDetailView.as_view(), name="uczniowie-detail-view"),
+    path('uczniowie/<int:pk>', generic_views.UczniowieListView.as_view(), name="uczniowie-list-view"),
     path('przedmioty/<int:pk>', generic_views.PrzedmiotyDetailView.as_view(), name="przedmioty-detail-view"),
     path('klasa-list-view/', generic_views.KlasaListView.as_view(), name="klasa-list-view"),
     path('klasa-template-view/', generic_views.KlasaTemplateView.as_view(), name="klasa-template-view"),

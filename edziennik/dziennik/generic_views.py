@@ -24,6 +24,14 @@ class UczniowieDetailView(DetailView, LoginRequiredMixin):
     model = Student
     template_name = "student.html"
 
+class UczniowieListView(ListView, LoginRequiredMixin):
+    template_nama ="student.html"
+    model =Student
+    def get_context_data(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        context["students"] = Klasa.objects.all()
+        return context
+
 
 class PrzedmiotyDetailView(DetailView, LoginRequiredMixin):
     model = Przedmiot

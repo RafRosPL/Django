@@ -3,7 +3,7 @@
   <body>
     <h1>Witamy w edzienniku, wybierz klasę:</h1>
       {% for coś in klasy %}
-          <a href="{% url 'generic_urls:uczniowie-detail-view' pk=coś.pk %}">
+          <a href="{% url 'generic_urls:uczniowie-list-view' pk=coś.pk %}">
               <li>{{ coś.name }}</li>
           </a>
     {% endfor %}
