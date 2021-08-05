@@ -8,7 +8,7 @@ class Klasa(models.Model):
         return self.name
 class Przedmiot(models.Model):
     name = models.CharField(max_length=128)
-    klasa =models.ForeignKey(Klasa, on_delete=models.CASCADE, null=True, blank=True)
+    klasa =models.ManyToManyField(Klasa)
 
     def __str__(self):
         return self.name
