@@ -13,6 +13,7 @@ from django.views.generic import (
 	DetailView,
 	DeleteView)
 
+
 class UczniowieDetailView(DetailView, LoginRequiredMixin):
     model = Student
     template_name = "student.html"
@@ -33,9 +34,11 @@ class UczniowieListView(ListView, LoginRequiredMixin):
         return context
 
 
+
 class PrzedmiotyDetailView(DetailView, LoginRequiredMixin):
     model = Przedmiot
     template_name ="przedmioty_detail_views.html"
+
 
 
 class KlasaListView(ListView):
@@ -73,17 +76,20 @@ class PrzedmiotTemplateView(TemplateView):
     template_name = "przedmioty.html"
     extra_context = {'przedmioty': Przedmiot.objects.all()}
 
+
 class PrzedmiotCreateView(CreateView):
     model = Przedmiot
     template_name ="form_przedmiot.html"
     fields = "__all__"
     success_url = reverse_lazy('generic_urls:przedmiot-template-view')
 
+
 class PrzedmiotUpdateView(UpdateView):
 	model = Przedmiot
 	fields = ("name")
 	template_name = "form_przedmiot.html"
 	success_url = reverse_lazy("edziennik:przedmiot")
+
 
 class PrzedmiotDeleteView(DeleteView):
 	model = Przedmiot
