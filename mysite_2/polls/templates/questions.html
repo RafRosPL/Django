@@ -1,8 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-	<h1> Welcome to Polls Questions!</h1>
-	{% for q in object_list %}
-		<li>{{q}}</li>
-	{% endfor %}
-	<a href="{% url 'index' %}"> Back to INDEX </a>
-	{% endblock %}
