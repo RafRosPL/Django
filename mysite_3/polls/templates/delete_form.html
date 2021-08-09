@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<form method='post'>
-	{% csrf_token %}
-    Do you want to delete object with id:{{object.id}}
-	<input type='submit' value='delete'>
-</form>
-{% endblock %}

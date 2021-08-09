@@ -1,7 +1,0 @@
-<{% extends "base.html" %}
-{% block content %}
-    {% for p in polls %}
-        <p>{{ p.id }}:{{p.name}}</p>
-    {% endfor %}
-    <a href="{% url 'hello' s0='pretty' %}"> Redirect to hello</a>
-{% endblock content %}
