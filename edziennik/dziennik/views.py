@@ -22,12 +22,12 @@ def studenty(request):
         template_name="student.html",
         context={"students": Student.objects.all()}
     )
-def ocena(request):
-    return render(
-        request,
-        template_name="ocena.html",
-        context={"oceny": Student.objects.all()}
-    )
+# def ocena(request):
+#     return render(
+#         request,
+#         template_name="ocena.html",
+#         context={"oceny": Ocena.objects.all()}
+#     )
 
 def nauczyciele(request):
     return render(

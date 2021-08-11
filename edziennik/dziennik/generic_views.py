@@ -44,9 +44,9 @@ class Przedmiot2TemplateView(TemplateView):
         context["przedmioty"] = Przedmiot.objects.filter(klasa__id=klasa.id)
         return context
 
-class OcenaTemplateView(TemplateView):
-    template_name = "ocena.html"
-    model = Ocena
+# class OcenaTemplateView(TemplateView):
+#     template_name = "ocena.html"
+#     model = Ocena
 
 
 class PrzedmiotyDetailView(DetailView, LoginRequiredMixin):

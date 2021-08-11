@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
-    <h1>Witamy w edzienniku, wybierz ucznia:</h1>
-        {% for coś in students %}-
-            <a href="{% url 'generic_urls:przedmiot2-list-view' pk=coś.pk %}">
-                <li>{{ coś.name }}</li>
-            </a>
+    <h1>Oto oceny twojego dziecka:</h1>
+        {% for id in oceny %}-
+
+                <li>{{ id.name }}</li>
+
         {% endfor %}
 	<a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
     {% endblock %}
