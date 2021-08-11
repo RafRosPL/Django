@@ -3,7 +3,7 @@
 <body>
     <h1>Witamy w edzienniku, wybierz ucznia:</h1>
         {% for coś in students %}-
-            <a href="{% url 'generic_urls:przedmiot2-template-view' pk=coś.pk %}">
+            <a href="{% url 'generic_urls:przedmiot2-list-view' pk=coś.pk %}">
                 <li>{{ coś.name }}</li>
             </a>
         {% endfor %}
