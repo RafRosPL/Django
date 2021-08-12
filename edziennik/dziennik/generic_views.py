@@ -41,12 +41,18 @@ class Przedmiot2TemplateView(TemplateView):
         print(kwargs)
         student = Student.objects.get(id=kwargs['pk'])
         klasa = student.klasa
+        context['student'] = student.id
         context["przedmioty"] = Przedmiot.objects.filter(klasa__id=klasa.id)
         return context
 
-# class OcenaTemplateView(TemplateView):
-#     template_name = "ocena.html"
-#     model = Ocena
+class OcenaTemplateView(TemplateView):
+    template_name = "ocena.html"
+    model = Ocena
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print(kwargs)
+        context["oceny"] = Ocena.objects.filter(przedmiot__id=kwargs['pk'],student__id=kwargs['uczen'])
+        return context
 
 
 class PrzedmiotyDetailView(DetailView, LoginRequiredMixin):

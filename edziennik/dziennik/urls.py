@@ -8,6 +8,6 @@ urlpatterns= [
     path("klasy/", views.klasy, name="klasy"),
     path("nauczyciele/", views.nauczyciele, name="nauczyciele"),
     path("student/",views.studenty, name="student"),
-    # path("ocena/",views.ocena, name="ocena"),
+    path("ocena/",views.ocena, name="ocena"),
     path('',views.index, name="index"),
 ]

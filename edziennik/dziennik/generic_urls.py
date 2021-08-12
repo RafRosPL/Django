@@ -28,4 +28,5 @@ urlpatterns = [
     path('student-create-view/', generic_views.StudentCreateView.as_view(), name="student-create-view"),
     path('student-update-view/<int:pk>/', generic_views.StudentUpdateView.as_view(), name="student-update-view"),
     path('student-delete-view/<int:pk>/', generic_views.StudentDeleteView.as_view(), name="student-delete-view"),
+    path('ocena-template-view/<int:uczen>/<int:pk>/', generic_views.OcenaTemplateView.as_view(), name="ocena-template-view"),
 ]

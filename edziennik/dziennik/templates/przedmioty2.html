@@ -3,9 +3,7 @@
   <body>
     <h1>Witamy w e-dzienniku, wybierz przedmiot:</h1>
         {% for cos in przedmioty %}
-            <a href="{% url 'generic_urls:ocena-template-view' uczen=student pk=cos.pk  %}">
                 <li>{{ cos.name }}</li>
-            </a>
         {% endfor %}
     <a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
     {% endblock %}
