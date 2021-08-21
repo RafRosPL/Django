@@ -3,7 +3,9 @@
 <body>
     <h1>Witamy w edzienniku, wybierz ucznia:</h1>
         {% for coś in students %}-
-            <li>{{ coś.name }}</li>
+            <a href="{% url 'generic_urls:przedmiot2-template-view' pk=coś.pk %}">
+                <li>{{ coś.name }}</li>
+            </a>
         {% endfor %}
 	<a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
     {% endblock %}

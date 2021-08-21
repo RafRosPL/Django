@@ -5,7 +5,7 @@ from dziennik.models import Ocena, Przedmiot, Klasa, Student, Nauczyciel
 def przedmioty(request):
     return render(
         request,
-        template_name="przedmioty.html",
+        template_name="przedmioty2.html",
         context={"przedmioty": Przedmiot.objects.all()}
     )
 
@@ -21,6 +21,12 @@ def studenty(request):
         request,
         template_name="student.html",
         context={"students": Student.objects.all()}
+    )
+def ocena(request):
+    return render(
+        request,
+        template_name="ocena.html",
+        context={"oceny": Ocena.objects.all()}
     )
 
 def nauczyciele(request):
