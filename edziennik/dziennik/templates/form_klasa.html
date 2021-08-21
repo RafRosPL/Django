@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<form method='post'>
+	{% csrf_token %}
+	<h1>Dodaj nową klase: </h1>
+	{{ form }}
+	<input type='submit' value='dodaj'>
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+% extends 'base.html' %}
+{% block content %}
+  <body>
+    <h1>Witamy w edzienniku, wybierz przedmiot:</h1>
+      {% for coś in klasy %}
+          <a href="{% url 'generic_urls:przedmioty-detail-view' pk=coś.pk %}">
+              <li>{{ coś.name }}</li>
+          </a>
+    {% endfor %}
+    <a href="{% url 'edziennik:index' %}"> Wróć do strony głównej</a>
+    {% endblock %}
