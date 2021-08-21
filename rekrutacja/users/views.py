@@ -7,7 +7,6 @@ from django.http import JsonResponse
 class UserDetailAPIView(View):
     def get(self,request,pk):
         try:
-            # users = User.objects.all().values('name', 'age')
             users = User.object.get(pk=pk)
         except User.DoesNotExist:
             response_data = {
@@ -22,8 +21,8 @@ class UserDetailAPIView(View):
         return JsonResponse(response_data)
 
 
-class UserAddApiView(View):
-    def post(selfself,request):
+class UserAddAPIView(View):
+    def post(self,request):
         body = request.POST
         name = body["name"]
         age = body["age"]
